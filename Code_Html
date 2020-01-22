@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Registration Form</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+
+<style>
+form {
+ width:600px;
+ padding:50px;
+ margin:auto;
+ background-color:#808080;
+ font-size:15px;
+}
+input[type=text] {
+ width:100%;
+ padding:5px;
+ font-size:17px;
+}
+input[type=Phone_num] {
+ width:100%;
+ padding:5px;
+ font-size:17px;
+}
+
+input[type=mail] {
+ width:100%;
+ padding:5px;
+ font-size:17px;
+}
+
+input[type=Password] {
+ width:100%;
+ padding:5px;
+ font-size:17px;
+}
+
+input[type=Confirm_Password] {
+ width:100%;
+ padding:5px;
+ font-size:17px;
+}
+
+.center {
+   text-align:center;
+   text-decoration: underline;
+}
+
+.space {
+   text-align:center;
+   padding:5px;
+   font-sixe:17px;
+   border-radius:0px;
+   width:10%;
+}
+</style>
+ <h2 class="center"> Student Registration Form </h2>
+ <p style="text-align:center;"> (Fill the form carefully for registration) </p>
+</head>
+<body bgcolor="#C0C0C0">
+<form class="form-horizontal" id="registration" method='post' action='register.php'>
+<table>
+<div> 
+<tr>
+    <td>
+     <br> <b>User_Name:</b>
+    </td>
+    <td>
+   <br> <input type="text" placeholder="User_Name" name="" required="required"></br>
+    </td>
+</tr>
+</div>
+
+<div>
+<tr>
+    <td>
+     <b> <br>Phone_num:</br> </b>
+    </td>
+    <td><br>
+      <select>
+        <option>+1</option>
+        <option>+44</option>
+        <option>+86</option>
+        <option>+91</option>
+        <option>+62</option>
+        <option>+55</option>
+        <option>+7</option>
+        <option>+81</option>
+        <option>+52</option>
+        <option>+90</option>
+     </select></br>
+      <input type="Phone_num" placeholder="Phone_num" name="numbers" onkeypress="isInputNumber(event)" required="required">
+         <script>
+           function isInputNumber(evt) {
+           var ch=String.fromCharCode(evt.which);
+           if(!(/[0-9]/.test(ch))) {
+            evt.preventDefault();  
+            }          
+           }
+          </script>     
+    </td>
+</tr>
+</div>
+
+<div>
+<tr>
+    <td>
+    <br> <b>Gender:</b> </br>
+    </td>
+    <td>
+    <br><input type="radio" name="Gender" required="required">Male
+    <input type="radio" name="Gender" required="required">Female</br>
+    </td>
+</tr>
+</div>
+
+<div>
+<tr>
+    <td>
+     <br> <b>Email:</b> </br>
+    </td>
+    <td>
+    <br><input type="mail" placeholder="Email" name="" required="required"></br>
+    </td>
+</tr>
+</div>
+
+<div>
+<tr>
+    <td>
+     <br> <b>Password:</b> </br>
+    </td>
+    <td>
+    <br><input type="Password" placeholder="Password" name="" required="required"></br>
+    </td>
+</tr>
+</div>
+
+<div>
+<tr>
+    <td>
+     <br> <b>Confirm_Password:</b> </br>
+    </td>
+    <td>
+    <br><input type="Confirm_Password" placeholder="Confirm_Password" name="" required="required"></br>
+    </td>
+</tr>
+</div>
+</table>
+</form>
+
+<br>
+<center>
+<button class="space"><b>Submit</b></button>
+</center>
+
+</body>
+</html>
